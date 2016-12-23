@@ -2,9 +2,9 @@ parameters:
   reclass:
     storage:
       node:
-        ctl01.workshop.cloudlab.cz:
+        ctl01.demo.jiocloud.com:
           name: ctl01
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openstack.control.workshop
@@ -18,9 +18,9 @@ parameters:
             mysql_cluster_role: master
             rabbitmq_cluster_role: master
             opencontrail_database_id: 1
-        ctl02.workshop.cloudlab.cz:
+        ctl02.demo.jiocloud.com:
           name: ctl02
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openstack.control.workshop
@@ -34,9 +34,9 @@ parameters:
             mysql_cluster_role: slave
             rabbitmq_cluster_role: slave
             opencontrail_database_id: 2
-        ctl03.workshop.cloudlab.cz:
+        ctl03.demo.jiocloud.com:
           name: ctl03
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openstack.control.workshop
@@ -50,9 +50,9 @@ parameters:
             mysql_cluster_role: slave
             rabbitmq_cluster_role: slave
             opencontrail_database_id: 3
-        cmp01.workshop.cloudlab.cz:
+        cmp01.demo.jiocloud.com:
           name: cmp01
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openstack.compute.workshop
@@ -62,9 +62,9 @@ parameters:
             opencontrail_compute_address: 172.16.10.105
             opencontrail_compute_gateway: 172.16.10.1
             opencontrail_compute_iface: eth0
-        cmp02.workshop.cloudlab.cz:
+        cmp02.demo.jiocloud.com:
           name: cmp02
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openstack.compute.workshop
@@ -74,9 +74,9 @@ parameters:
             opencontrail_compute_address: 172.16.10.106
             opencontrail_compute_gateway: 172.16.10.1
             opencontrail_compute_iface: eth0
-        web01.workshop.cloudlab.cz:
+        web01.demo.jiocloud.com:
           name: web01
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openstack.proxy.workshop
@@ -88,18 +88,18 @@ parameters:
             heka_shipper_output_password: Use.toylett1823
             heka_shipper_output_vhost: heka
             heka_shipper_output_user: heka
-        mon01.workshop.cloudlab.cz:
+        mon01.demo.jiocloud.com:
           name: mon01
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openstack.monitor.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
             single_address: 172.16.10.107
-        mtr01.workshop.cloudlab.cz:
+        mtr01.demo.jiocloud.com:
           name: mtr01
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openstack.meter.workshop
@@ -107,9 +107,9 @@ parameters:
             salt_master_host: ${_param:reclass_config_master}
             single_address: 172.16.10.108
             ceilometer_database_host: 172.16.10.108
-        ovscmp01.workshop.cloudlab.cz:
+        ovscmp01.demo.jiocloud.com:
           name: ovscmp01
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openssh.server.single
@@ -132,9 +132,9 @@ parameters:
                 setup:
                   cluster:
                     join: false
-        ovscmp02.workshop.cloudlab.cz:
+        ovscmp02.demo.jiocloud.com:
           name: ovscmp02
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openssh.server.single
@@ -154,9 +154,9 @@ parameters:
                 # XXX: generate openvstorage id for each master node, see
                 # openvstorage/common/workshop.yml for details
                 id: v1ppECRpIasjYevx
-        ovscmp03.workshop.cloudlab.cz:
+        ovscmp03.demo.jiocloud.com:
           name: ovscmp03
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openssh.server.single
@@ -176,9 +176,9 @@ parameters:
                 # XXX: generate openvstorage id for each master node, see
                 # openvstorage/common/workshop.yml for details
                 id: plGRCeNdPkSKXlmE
-        ovscmp04.workshop.cloudlab.cz:
+        ovscmp04.demo.jiocloud.com:
           name: ovscmp04
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.openssh.server.single
@@ -192,9 +192,9 @@ parameters:
             opencontrail_compute_iface: eth0
             ovs_hypervisor_name: ovscmp04
             ovs_rabbitmq_cluster_role: slave
-        log01.workshop.cloudlab.cz:
+        log01.demo.jiocloud.com:
           name: log01
-          domain: workshop.cloudlab.cz
+          domain: demo.jiocloud.com
           classes:
           - system.linux.system.single
           - system.linux.system.lowmem
