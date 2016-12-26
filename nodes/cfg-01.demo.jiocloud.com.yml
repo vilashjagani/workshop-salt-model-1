@@ -16,7 +16,7 @@ classes:
 - system.openstack.proxy.workshop
 parameters:
   _param:
-    reclass_data_repository: "https://github.com/tcpcloud/workshop-salt-model.git"
+    reclass_data_repository: "https://github.com/vilashjagani/workshop-salt-model-1.git"
     reclass_data_revision: master
     reclass_config_master: 192.168.0.2
     single_address: 192.168.0.2
