@@ -12,7 +12,7 @@ parameters:
           - system.linux.system.lowmem
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.101
+            single_address: 192.168.0.6
             keepalived_vip_interface: eth0
             keepalived_vip_priority: 103
             mysql_cluster_role: master
@@ -28,7 +28,7 @@ parameters:
           - system.linux.system.lowmem
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.102
+            single_address: 192.168.0.3
             keepalived_vip_interface: eth0
             keepalived_vip_priority: 102
             mysql_cluster_role: slave
@@ -44,7 +44,7 @@ parameters:
           - system.linux.system.lowmem
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.103
+            single_address: 192.168.0.4
             keepalived_vip_interface: eth0
             keepalived_vip_priority: 101
             mysql_cluster_role: slave
@@ -58,9 +58,9 @@ parameters:
           - system.openstack.compute.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.105
-            opencontrail_compute_address: 172.16.10.105
-            opencontrail_compute_gateway: 172.16.10.1
+            single_address: 192.168.0.7
+            opencontrail_compute_address: 192.168.0.7
+            opencontrail_compute_gateway: 192.168.0.1
             opencontrail_compute_iface: eth0
         cmp02.demo.jiocloud.com:
           name: cmp02
@@ -70,9 +70,9 @@ parameters:
           - system.openstack.compute.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.106
-            opencontrail_compute_address: 172.16.10.106
-            opencontrail_compute_gateway: 172.16.10.1
+            single_address: 192.168.0.5
+            opencontrail_compute_address: 192.168.0.5
+            opencontrail_compute_gateway: 192.168.0.1
             opencontrail_compute_iface: eth0
         web01.demo.jiocloud.com:
           name: web01
@@ -82,9 +82,9 @@ parameters:
           - system.openstack.proxy.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.104
+            single_address: 192.168.0.21
             heka_shipper_output_exchange: heka
-            heka_shipper_output_host: 172.16.10.101
+            heka_shipper_output_host: 192.168.0.8
             heka_shipper_output_password: Use.toylett1823
             heka_shipper_output_vhost: heka
             heka_shipper_output_user: heka
@@ -96,7 +96,7 @@ parameters:
           - system.openstack.monitor.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.107
+            single_address: 192.168.0.8
         mtr01.demo.jiocloud.com:
           name: mtr01
           domain: demo.jiocloud.com
@@ -105,8 +105,8 @@ parameters:
           - system.openstack.meter.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.108
-            ceilometer_database_host: 172.16.10.108
+            single_address: 192.168.0.9
+            ceilometer_database_host: 192.168.0.9
         ovscmp01.demo.jiocloud.com:
           name: ovscmp01
           domain: demo.jiocloud.com
